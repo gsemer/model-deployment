@@ -10,7 +10,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict/', methods=['GET'])
 def predict():
     fixed_acidity = request.args.get('fixed acidity')
     volatile_acidity = request.args.get('volatile acidity')
